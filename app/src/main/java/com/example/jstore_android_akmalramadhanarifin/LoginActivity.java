@@ -37,6 +37,9 @@ public class LoginActivity extends AppCompatActivity {
                             if (jsonResponse != null){
                                 AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
                                 builder.setMessage("Login success!").create().show();
+                                Intent loginIntent = new Intent(LoginActivity.this, MainActivity.class);
+                                loginIntent.putExtra("currentUserId", jsonResponse.getInt("id"));
+                                startActivity(loginIntent);
                             }
                         }catch (JSONException e){
                             AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);

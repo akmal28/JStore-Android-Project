@@ -3,15 +3,15 @@ package com.example.jstore_android_akmalramadhanarifin;
 public class Item {
     private int id;
     private String name;
-    //private int price;
+    private int price;
     private String category;
     private String status;
     private Supplier supplier;
 
-    public Item(int id, String name, String category, String status, Supplier supplier) {
+    public Item(int id, String name, int price, String category, String status, Supplier supplier) {
         this.id = id;
         this.name = name;
-        //this.price = price;
+        this.price = price;
         this.category = category;
         this.status = status;
         this.supplier = supplier;
@@ -33,13 +33,13 @@ public class Item {
         this.name = name;
     }
 
-    /*public int getPrice() {
+    public int getPrice() {
         return price;
-    }*/
+    }
 
-    /*public void setPrice(int price) {
+    public void setPrice(int price) {
         this.price = price;
-    }*/
+    }
 
     public String getCategory() {
         return category;
